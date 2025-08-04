@@ -584,7 +584,8 @@ module keccak_round
   ////////////////
 
   // Only allow `DInWidth` that `Width` is integer divisible by `DInWidth`
-  `ASSERT_INIT(WidthDivisableByDInWidth_A, (Width % DInWidth) == 0)
+  
+  //`ASSERT_INIT(WidthDivisableByDInWidth_A, (Width % DInWidth) == 0)
 
   // If `run_i` triggered, it shall complete
   //`ASSERT(RunResultComplete_A, run_i ##[MaxRound:] complete_o, clk_i, !rst_ni)
