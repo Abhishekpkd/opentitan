@@ -48,7 +48,7 @@ module keccak_round
 
   // Feed parameters
   parameter  int DInWidth = 64, // currently only 64bit supported
-  localparam int DInEntry = Width / DInWidth,
+  localparam int DInEntry = (Width + DInWidth - 1) / DInWidth, //celling Devision to Include Partial Chunks
   localparam int DInAddr  = $clog2(DInEntry),
 
   // Control parameters
@@ -101,6 +101,9 @@ module keccak_round
   /////////////////////
   // Control signals //
   /////////////////////
+
+  localparam int last_valid_chunk = Width / DInWidth;
+  localparam int last_chunk_bits = Width % DInWidth; //To find partial bits
 
   // Update storage register
   logic update_storage;
@@ -483,15 +486,32 @@ module keccak_round
 
   always_comb begin
     storage_d = keccak_out;
+
+    //int last_valid_chunk = Width / DInWidth; 
+    //int last_chunk_bits = Width % DInWidth;  //To find partial bits 
+
     if (xor_message) begin
       for (int j = 0 ; j < Share ; j++) begin
         for (int unsigned i = 0 ; i < DInEntry ; i++) begin
           // ICEBOX(#18029): handle If Width is not integer divisible by DInWidth
           // Currently it is not allowed to have partial write
           // Please see the Assertion `WidthDivisableByDInWidth_A`
+          
           if (addr_i == i[DInAddr-1:0]) begin
-            storage_d[j][i*DInWidth+:DInWidth] =
+            if(i < last_valid_chunk) begin
+              storage_d[j][i*DInWidth+:DInWidth] =
               storage[j][i*DInWidth+:DInWidth] ^ data_i[j];
+
+            end else if(i == last_valid_chunk && last_chunk_bits != 0) begin
+              //Partial chunk XOR
+              logic [DInWidth-1:0] mask;
+              mask = (1<<last_chunk_bits)-1;
+
+              storage_d[j][i*DInWidth+:DInWidth] =
+               (storage[j][i*DInWidth+:DInWidth] ^ data_i[j]) & mask |
+               storage[j][i*DInWidth+:DInWidth] & ~mask;
+
+            end
           end else begin
             storage_d[j][i*DInWidth+:DInWidth] = storage[j][i*DInWidth+:DInWidth];
           end
@@ -584,7 +604,7 @@ module keccak_round
   ////////////////
 
   // Only allow `DInWidth` that `Width` is integer divisible by `DInWidth`
-  
+
   //`ASSERT_INIT(WidthDivisableByDInWidth_A, (Width % DInWidth) == 0)
 
   // If `run_i` triggered, it shall complete
