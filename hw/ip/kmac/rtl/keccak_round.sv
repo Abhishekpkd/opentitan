@@ -505,7 +505,7 @@ module keccak_round
             end else if(i == last_valid_chunk && last_chunk_bits != 0) begin
               //Partial chunk XOR
               logic [DInWidth-1:0] mask;
-              mask = (1<<last_chunk_bits)-1;
+              mask = (DInWidth'(1)<<last_chunk_bits)-1;
 
               storage_d[j][i*DInWidth+:DInWidth] =
                (storage[j][i*DInWidth+:DInWidth] ^ data_i[j]) & mask |
