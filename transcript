@@ -1,0 +1,158 @@
+# vsim -c -coverage work.tb_keccak_round_mask "+DO_ONE_ROUND" -do "coverage save -onexit cov_mask_one1600.ucdb; run -all; quit -f" -GWidth=1600 -GEnMasking=1 -GDInWidth=64 
+# Start time: 09:54:25 on Aug 13,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 linux_x86_64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.prim_mubi_pkg(fast)
+# Loading work.lc_ctrl_reg_pkg(fast)
+# Loading work.prim_util_pkg(fast)
+# Loading work.lc_ctrl_state_pkg(fast)
+# Loading work.lc_ctrl_pkg(fast)
+# Loading work.tb_keccak_round_mask(fast)
+# Loading work.sha3_pkg(fast)
+# Loading work.keccak_round(fast)
+# Loading work.prim_sparse_fsm_flop(fast)
+# Loading work.prim_flop(fast)
+# Loading work.prim_sec_anchor_buf(fast)
+# Loading work.prim_buf(fast)
+# Loading work.keccak_2share(fast)
+# Loading work.prim_dom_and_2share(fast)
+# Loading work.prim_xor2(fast)
+# Loading work.prim_flop_en(fast)
+# Loading work.prim_count_pkg(fast)
+# Loading work.prim_count(fast)
+# Loading work.prim_flop(fast__1)
+# Loading work.prim_flop(fast__2)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (6) for port 'd_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_state_regs/u_state_flop File: hw/ip/prim/rtl/prim_sparse_fsm_flop.sv Line: 34
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (1) for port 'in_i'. The port definition is at: hw/ip/prim/rtl/prim_sec_anchor_buf.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_prim_sec_anchor_buf File: hw/ip/kmac/rtl/keccak_round.sv Line: 474
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (1) for port 'out_o'. The port definition is at: hw/ip/prim/rtl/prim_sec_anchor_buf.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_prim_sec_anchor_buf File: hw/ip/kmac/rtl/keccak_round.sv Line: 474
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in0_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[0]/u_dom/u_prim_xor_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 71
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in1_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[0]/u_dom/u_prim_xor_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 71
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'out_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[0]/u_dom/u_prim_xor_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 71
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'd_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[0]/u_dom/u_prim_flop_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 81
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'q_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[0]/u_dom/u_prim_flop_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 81
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'd_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[0]/u_dom/gen_inner_domain_regs/u_prim_flop_tab01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 102
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'q_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[0]/u_dom/gen_inner_domain_regs/u_prim_flop_tab01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 102
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in0_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[0]/u_dom/u_prim_xor_q01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 130
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in1_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[0]/u_dom/u_prim_xor_q01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 130
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'out_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[0]/u_dom/u_prim_xor_q01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 130
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in0_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[1]/u_dom/u_prim_xor_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 71
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in1_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[1]/u_dom/u_prim_xor_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 71
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'out_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[1]/u_dom/u_prim_xor_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 71
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'd_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[1]/u_dom/u_prim_flop_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 81
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'q_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[1]/u_dom/u_prim_flop_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 81
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'd_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[1]/u_dom/gen_inner_domain_regs/u_prim_flop_tab01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 102
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'q_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[1]/u_dom/gen_inner_domain_regs/u_prim_flop_tab01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 102
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in0_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[1]/u_dom/u_prim_xor_q01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 130
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in1_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[1]/u_dom/u_prim_xor_q01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 130
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'out_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[1]/u_dom/u_prim_xor_q01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 130
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in0_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[2]/u_dom/u_prim_xor_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 71
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in1_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[2]/u_dom/u_prim_xor_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 71
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'out_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[2]/u_dom/u_prim_xor_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 71
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'd_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[2]/u_dom/u_prim_flop_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 81
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'q_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[2]/u_dom/u_prim_flop_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 81
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'd_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[2]/u_dom/gen_inner_domain_regs/u_prim_flop_tab01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 102
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'q_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[2]/u_dom/gen_inner_domain_regs/u_prim_flop_tab01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 102
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in0_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[2]/u_dom/u_prim_xor_q01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 130
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in1_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[2]/u_dom/u_prim_xor_q01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 130
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'out_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[2]/u_dom/u_prim_xor_q01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 130
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in0_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[3]/u_dom/u_prim_xor_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 71
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in1_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[3]/u_dom/u_prim_xor_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 71
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'out_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[3]/u_dom/u_prim_xor_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 71
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'd_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[3]/u_dom/u_prim_flop_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 81
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'q_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[3]/u_dom/u_prim_flop_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 81
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'd_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[3]/u_dom/gen_inner_domain_regs/u_prim_flop_tab01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 102
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'q_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[3]/u_dom/gen_inner_domain_regs/u_prim_flop_tab01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 102
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in0_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[3]/u_dom/u_prim_xor_q01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 130
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in1_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[3]/u_dom/u_prim_xor_q01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 130
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'out_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[3]/u_dom/u_prim_xor_q01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 130
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in0_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[4]/u_dom/u_prim_xor_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 71
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in1_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[4]/u_dom/u_prim_xor_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 71
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'out_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[4]/u_dom/u_prim_xor_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 71
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'd_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[4]/u_dom/u_prim_flop_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 81
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'q_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[4]/u_dom/u_prim_flop_t01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 81
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'd_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[4]/u_dom/gen_inner_domain_regs/u_prim_flop_tab01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 102
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'q_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_flop_en.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[4]/u_dom/gen_inner_domain_regs/u_prim_flop_tab01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 102
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in0_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[4]/u_dom/u_prim_xor_q01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 130
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'in1_i'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[4]/u_dom/u_prim_xor_q01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 130
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (320) for port 'out_o'. The port definition is at: hw/ip/prim_generic/rtl/prim_xor2.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_keccak_p/g_2share_chi/g_chi_w[4]/u_dom/u_prim_xor_q01 File: hw/ip/prim/rtl/prim_dom_and_2share.sv Line: 130
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (5) for port 'step_i'. The port definition is at: hw/ip/prim/rtl/prim_count.sv(56).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_round_count File: hw/ip/kmac/rtl/keccak_round.sv Line: 589
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1600) does not match connection size (5) for port 'cnt_o'. The port definition is at: hw/ip/prim/rtl/prim_count.sv(58).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_keccak_round_mask/dut/u_round_count File: hw/ip/kmac/rtl/keccak_round.sv Line: 589
+# coverage save -onexit cov_mask_one1600.ucdb
+#  run -all
+# [0] TB: +DO_ONE_ROUND set — pulsing run_i once
+# [75000] ready_o=1, keccak_st=31
+# PASS: Partial-chunk mask OK. Width=1600 DInWidth=64 LastAddr=24 LastBits=64
+# ** Note: $finish    : hw/ip/kmac/dv/unit_tb_keccak_round/tb_keccak_round_mask.sv(277)
+#    Time: 665 ns  Iteration: 1  Instance: /tb_keccak_round_mask
+# Saving coverage database on exit...
+# End time: 09:54:26 on Aug 13,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 55

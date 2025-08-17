@@ -1,0 +1,579 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/abhishek/opentitan_project/opentitan
+T_opt
+!s110 1755059063
+V6f:hNVGzd9Shha82>b2Ti1
+Z2 04 20 4 work tb_keccak_round_mask fast 0
+=1-000ae431a4f1-689c1377-85998-dfa4
+Z3 !s124 OEM10U35 
+o-quiet -auto_acc_if_foreign -work work -G Width=800 -G EnMasking=1 -G DInWidth=64
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;2021.2;73
+R1
+T_opt1
+!s110 1755059065
+VbzNVYc1US<ZeZj7?<O;Nf0
+R2
+=1-000ae431a4f1-689c1379-63514-dfda
+R3
+o-quiet -auto_acc_if_foreign -work work -G Width=1600 -G EnMasking=1 -G DInWidth=64
+R4
+n@_opt1
+R5
+T_opt2
+!s110 1755059061
+VL`E;>k9TJc`YA9mcL_l5`3
+R2
+=1-000ae431a4f1-689c1375-a69b5-df6e
+R3
+o-quiet -auto_acc_if_foreign -work work -G Width=400 -G EnMasking=1 -G DInWidth=64
+R4
+n@_opt2
+R5
+R1
+vkeccak_2share
+Z6 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z7 DXx4 work 13 prim_mubi_pkg 0 22 3dK@7Y8mIVLVB:2N18e902
+Z8 DXx4 work 13 prim_util_pkg 0 22 EU10GaJ?NoFHdZ3n[12@J1
+Z9 DXx4 work 17 lc_ctrl_state_pkg 0 22 f99>dn^dH6Bg`^1Joe_mk2
+Z10 DXx4 work 15 lc_ctrl_reg_pkg 0 22 fPi3Q9g:QXbOJX>>g@]Oo1
+Z11 DXx4 work 11 lc_ctrl_pkg 0 22 M9Pg_fI4L[oE;o]e>;KC>3
+Z12 !s110 1755058926
+!i10b 1
+!s100 <Vg^IgJcZZE?TdEOd@d<a3
+IQ<_7G@lzEEKVFYVAOoEKQ2
+S1
+R1
+Z13 w1753852921
+8hw/ip/kmac/rtl/keccak_2share.sv
+Fhw/ip/kmac/rtl/keccak_2share.sv
+!i122 0
+L0 10 554
+Z14 VDg1SIo80bB@j0V0VzS_@n1
+Z15 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z16 !s108 1755058926.000000
+Z17 !s107 hw/ip/prim/rtl/prim_assert_sec_cm.svh|hw/ip/prim/rtl/prim_assert_standard_macros.svh|hw/ip/kmac/dv/unit_tb_keccak_round/tb_keccak_round_mask.sv|hw/ip/kmac/rtl/keccak_round.sv|hw/ip/kmac/rtl/keccak_2share.sv|hw/ip/kmac/rtl/sha3_pkg.sv|hw/ip/lc_ctrl/rtl/lc_ctrl_pkg.sv|hw/ip/lc_ctrl/rtl/lc_ctrl_reg_pkg.sv|hw/ip/lc_ctrl/rtl/lc_ctrl_state_pkg.sv|hw/ip/prim_generic/rtl/prim_xor2.sv|hw/ip/prim_generic/rtl/prim_flop_en.sv|hw/ip/prim_generic/rtl/prim_buf.sv|hw/ip/prim_generic/rtl/prim_flop.sv|hw/ip/prim/rtl/prim_count.sv|hw/ip/prim/rtl/prim_sec_anchor_buf.sv|hw/ip/prim/rtl/prim_sparse_fsm_flop.sv|hw/ip/prim/rtl/prim_dom_and_2share.sv|hw/ip/prim/rtl/prim_flop_macros.sv|hw/ip/prim/rtl/prim_assert.sv|hw/ip/prim/rtl/prim_count_pkg.sv|hw/ip/prim/rtl/prim_mubi_pkg.sv|hw/ip/prim/rtl/prim_util_pkg.sv|hw/ip/prim/rtl/prim_pkg.sv|
+Z18 !s90 -sv|-timescale|1ns/1ps|+acc|+cover=bcesft|+define+QUESTA|+incdir+hw/ip/prim/rtl|+incdir+hw/ip/lc_ctrl/rtl|+incdir+hw/ip/kmac/rtl|+incdir+hw/dv/sv|hw/ip/prim/rtl/prim_pkg.sv|hw/ip/prim/rtl/prim_util_pkg.sv|hw/ip/prim/rtl/prim_mubi_pkg.sv|hw/ip/prim/rtl/prim_count_pkg.sv|hw/ip/prim/rtl/prim_assert.sv|hw/ip/prim/rtl/prim_flop_macros.sv|hw/ip/prim/rtl/prim_dom_and_2share.sv|hw/ip/prim/rtl/prim_sparse_fsm_flop.sv|hw/ip/prim/rtl/prim_sec_anchor_buf.sv|hw/ip/prim/rtl/prim_count.sv|hw/ip/prim_generic/rtl/prim_flop.sv|hw/ip/prim_generic/rtl/prim_buf.sv|hw/ip/prim_generic/rtl/prim_flop_en.sv|hw/ip/prim_generic/rtl/prim_xor2.sv|hw/ip/lc_ctrl/rtl/lc_ctrl_state_pkg.sv|hw/ip/lc_ctrl/rtl/lc_ctrl_reg_pkg.sv|hw/ip/lc_ctrl/rtl/lc_ctrl_pkg.sv|hw/ip/kmac/rtl/sha3_pkg.sv|hw/ip/kmac/rtl/keccak_2share.sv|hw/ip/kmac/rtl/keccak_round.sv|hw/ip/kmac/dv/unit_tb_keccak_round/tb_keccak_round_mask.sv|
+!i113 0
+Z19 !s102 +cover=bcesft
+Z20 o-sv -timescale 1ns/1ps +acc +cover=bcesft -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z21 !s92 -sv -timescale 1ns/1ps +acc +cover=bcesft +define+QUESTA +incdir+hw/ip/prim/rtl +incdir+hw/ip/lc_ctrl/rtl +incdir+hw/ip/kmac/rtl +incdir+hw/dv/sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+vkeccak_round
+R6
+R7
+R8
+R9
+R10
+R11
+DXx4 work 8 sha3_pkg 0 22 =4OhAcFC2_8F8UH1z9geH1
+R12
+!i10b 1
+!s100 T9g68?0]WP7XoJb^l<97T1
+IMFc4lolLJZ1C6IS^nW=HR2
+S1
+R1
+w1754998615
+8hw/ip/kmac/rtl/keccak_round.sv
+Fhw/ip/kmac/rtl/keccak_round.sv
+!i122 0
+L0 38 611
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4
+Xlc_ctrl_pkg
+R6
+R8
+R9
+R10
+R7
+R12
+!i10b 1
+!s100 A9fckzE:M5D=<PdNPIRk@0
+IM9Pg_fI4L[oE;o]e>;KC>3
+S1
+R1
+R13
+8hw/ip/lc_ctrl/rtl/lc_ctrl_pkg.sv
+Fhw/ip/lc_ctrl/rtl/lc_ctrl_pkg.sv
+!i122 0
+Z22 L0 8 0
+VM9Pg_fI4L[oE;o]e>;KC>3
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4
+Xlc_ctrl_reg_pkg
+R6
+R12
+!i10b 1
+!s100 iY`G3MCEQ?DPdS21D3zlQ0
+IfPi3Q9g:QXbOJX>>g@]Oo1
+S1
+R1
+R13
+8hw/ip/lc_ctrl/rtl/lc_ctrl_reg_pkg.sv
+Fhw/ip/lc_ctrl/rtl/lc_ctrl_reg_pkg.sv
+!i122 0
+Z23 L0 7 0
+VfPi3Q9g:QXbOJX>>g@]Oo1
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4
+Xlc_ctrl_state_pkg
+R6
+R8
+R12
+!i10b 1
+!s100 CIzkDJMi:I0cm]9D10Igm3
+If99>dn^dH6Bg`^1Joe_mk2
+S1
+R1
+R13
+8hw/ip/lc_ctrl/rtl/lc_ctrl_state_pkg.sv
+Fhw/ip/lc_ctrl/rtl/lc_ctrl_state_pkg.sv
+!i122 0
+L0 11 0
+Vf99>dn^dH6Bg`^1Joe_mk2
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4
+vprim_buf
+R6
+R12
+!i10b 1
+!s100 PL<hl?NJfmU9Tf3AZg?;B0
+IhSPO?=iI:2z<cI9@D2fZ`1
+S1
+R1
+R13
+8hw/ip/prim_generic/rtl/prim_buf.sv
+Fhw/ip/prim_generic/rtl/prim_buf.sv
+!i122 0
+L0 7 12
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4
+vprim_count
+R6
+DXx4 work 14 prim_count_pkg 0 22 [6_X7e4NK9@];<gMKW1HM2
+R12
+!i10b 1
+!s100 MTcbc;D97;VFWg1H3h^M@1
+IkO6]_9lG;4_oMFC09Qbh;3
+S1
+R1
+R13
+8hw/ip/prim/rtl/prim_count.sv
+Fhw/ip/prim/rtl/prim_count.sv
+!i122 0
+L0 28 286
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4
+Xprim_count_pkg
+R6
+R12
+!i10b 1
+!s100 KZUO5>SVA;lPTG^XLPYZR2
+I[6_X7e4NK9@];<gMKW1HM2
+S1
+R1
+R13
+8hw/ip/prim/rtl/prim_count_pkg.sv
+Fhw/ip/prim/rtl/prim_count_pkg.sv
+!i122 0
+L0 5 0
+V[6_X7e4NK9@];<gMKW1HM2
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4
+vprim_dom_and_2share
+R6
+R12
+!i10b 1
+!s100 IFc9`5o;C2N1a:d6cPONa0
+I=JB1@cn8R70hh<g2i`2ES1
+S1
+R1
+R13
+8hw/ip/prim/rtl/prim_dom_and_2share.sv
+Fhw/ip/prim/rtl/prim_dom_and_2share.sv
+!i122 0
+L0 28 146
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4
+vprim_flop
+R6
+R12
+!i10b 1
+!s100 zMOJ>Bi?cB]aR00QRJDhZ3
+I7nHR9oz0::>ekzQ82T65A3
+S1
+R1
+R13
+8hw/ip/prim_generic/rtl/prim_flop.sv
+Fhw/ip/prim_generic/rtl/prim_flop.sv
+!i122 0
+L0 7 19
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4
+vprim_flop_en
+R6
+R12
+!i10b 1
+!s100 5GZa9M2dKg8Kdz=clOgbe2
+ILCDgVV<4PGi5fCdW;RNbA0
+S1
+R1
+R13
+8hw/ip/prim_generic/rtl/prim_flop_en.sv
+Fhw/ip/prim_generic/rtl/prim_flop_en.sv
+!i122 0
+L0 7 33
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4
+Xprim_mubi_pkg
+R6
+R12
+!i10b 1
+!s100 XY<i8Kj]AlIzY401MZHYU2
+I3dK@7Y8mIVLVB:2N18e902
+S1
+R1
+R13
+8hw/ip/prim/rtl/prim_mubi_pkg.sv
+Fhw/ip/prim/rtl/prim_mubi_pkg.sv
+!i122 0
+L0 15 0
+V3dK@7Y8mIVLVB:2N18e902
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4
+Xprim_pkg
+R6
+R12
+!i10b 1
+!s100 nf`kV@gMQ?`:5L]WBonoT2
+IJn_Em63Zb?6<Ibz5ooMjE2
+S1
+R1
+R13
+8hw/ip/prim/rtl/prim_pkg.sv
+Fhw/ip/prim/rtl/prim_pkg.sv
+!i122 0
+R22
+VJn_Em63Zb?6<Ibz5ooMjE2
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4
+vprim_sec_anchor_buf
+R6
+R12
+!i10b 1
+!s100 5ha_ga2Mk?RlCOX>XjCoh3
+I5:cMWVhmFDno8d8`HDPU^0
+S1
+R1
+R13
+8hw/ip/prim/rtl/prim_sec_anchor_buf.sv
+Fhw/ip/prim/rtl/prim_sec_anchor_buf.sv
+!i122 0
+L0 7 15
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4
+vprim_sparse_fsm_flop
+R6
+R12
+!i10b 1
+!s100 ]4>Y0HD]`z[6JKljMZA0@2
+Ig0TkJCK84@<T3Lo>;<U]O0
+S1
+R1
+R13
+8hw/ip/prim/rtl/prim_sparse_fsm_flop.sv
+Fhw/ip/prim/rtl/prim_sparse_fsm_flop.sv
+!i122 0
+L0 7 61
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4
+Xprim_util_pkg
+R6
+R12
+!i10b 1
+!s100 Y4UVSaYNTbRAF?>>Z^Af?2
+IEU10GaJ?NoFHdZ3n[12@J1
+S1
+R1
+R13
+8hw/ip/prim/rtl/prim_util_pkg.sv
+Fhw/ip/prim/rtl/prim_util_pkg.sv
+!i122 0
+L0 9 0
+VEU10GaJ?NoFHdZ3n[12@J1
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4
+vprim_xor2
+R6
+R12
+!i10b 1
+!s100 [jg>cZ4Of4eYB8kjVUQQ;3
+IXS=PLmH0EzRK>D;z7kJPc3
+S1
+R1
+R13
+8hw/ip/prim_generic/rtl/prim_xor2.sv
+Fhw/ip/prim_generic/rtl/prim_xor2.sv
+!i122 0
+L0 7 11
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4
+Xsha3_pkg
+R6
+R12
+!i10b 1
+!s100 E<?[WmX8C[b>J96OzI;?i0
+I=4OhAcFC2_8F8UH1z9geH1
+S1
+R1
+R13
+8hw/ip/kmac/rtl/sha3_pkg.sv
+Fhw/ip/kmac/rtl/sha3_pkg.sv
+!i122 0
+R23
+V=4OhAcFC2_8F8UH1z9geH1
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4
+vtb_keccak_round_mask
+R6
+R8
+R9
+R10
+R7
+R11
+R12
+!i10b 1
+!s100 kG5]HVgH@:Q<0Z1lhjfV83
+I7d1;:GO=H<NX;E8N8gNg_2
+S1
+R1
+w1755013060
+8hw/ip/kmac/dv/unit_tb_keccak_round/tb_keccak_round_mask.sv
+Fhw/ip/kmac/dv/unit_tb_keccak_round/tb_keccak_round_mask.sv
+!i122 0
+L0 4 284
+R14
+R15
+r1
+!s85 0
+31
+R16
+R17
+R18
+!i113 0
+R19
+R20
+R21
+R4

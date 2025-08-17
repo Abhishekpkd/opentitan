@@ -49,7 +49,7 @@ module keccak_round
   // Feed parameters
   parameter  int DInWidth = 64, // currently only 64bit supported
   localparam int DInEntry = (Width + DInWidth - 1) / DInWidth, //celling Devision to Include Partial Chunks
-  localparam int DInAddr  = $clog2(DInEntry),
+  localparam int DInAddr  = (DInEntry <= 1) ? 1 : $clog2(DInEntry),
 
   // Control parameters
   parameter  bit EnMasking    = 1'b0,  // Enable SCA hardening, requires Width >= 50
@@ -104,6 +104,17 @@ module keccak_round
 
   localparam int last_valid_chunk = Width / DInWidth;
   localparam int last_chunk_bits = Width % DInWidth; //To find partial bits
+
+  /* // Hard fail at elaboration for illegal combos.
+  // Keeps the rest of the code unchanged.
+  generate
+    if (EnMasking && (Width < 50)) begin : gen_illegal_cfg
+      initial $fatal(1,
+        "keccak_round: EnMasking=1 requires Width >= 50 (got %0d). \n
+        Use widths in {50,100,200,400,800,1600} or set EnMasking=0.", Width);
+    end
+  endgenerate   */
+
 
   // Update storage register
   logic update_storage;
@@ -492,30 +503,30 @@ module keccak_round
 
     if (xor_message) begin
       for (int j = 0 ; j < Share ; j++) begin
-        for (int unsigned i = 0 ; i < DInEntry ; i++) begin
+        for (int unsigned idx = 0 ; idx < DInEntry ; idx++) begin
           // ICEBOX(#18029): handle If Width is not integer divisible by DInWidth
           // Currently it is not allowed to have partial write
           // Please see the Assertion `WidthDivisableByDInWidth_A`
           
-          if (addr_i == i[DInAddr-1:0]) begin
-            if(i < last_valid_chunk) begin
-              storage_d[j][i*DInWidth+:DInWidth] =
-              storage[j][i*DInWidth+:DInWidth] ^ data_i[j];
+          if (addr_i == DInAddr'(idx)) begin
+            if(idx < last_valid_chunk) begin
+              storage_d[j][idx*DInWidth+:DInWidth] =
+              storage[j][idx*DInWidth+:DInWidth] ^ data_i[j];
 
-            end else if(i == last_valid_chunk && last_chunk_bits != 0) begin
+            end else if(idx == last_valid_chunk && last_chunk_bits != 0) begin
               //Partial chunk XOR
               logic [DInWidth-1:0] mask;
               mask = (DInWidth'(1)<<last_chunk_bits)-1;
 
-              storage_d[j][i*DInWidth+:DInWidth] =
-               (storage[j][i*DInWidth+:DInWidth] ^ data_i[j]) & mask |
-               storage[j][i*DInWidth+:DInWidth] & ~mask;
+              storage_d[j][idx*DInWidth+:DInWidth] =
+               (storage[j][idx*DInWidth+:DInWidth] ^ data_i[j]) & mask |
+               storage[j][idx*DInWidth+:DInWidth] & ~mask;
 
             end
           end else begin
-            storage_d[j][i*DInWidth+:DInWidth] = storage[j][i*DInWidth+:DInWidth];
+            storage_d[j][idx*DInWidth+:DInWidth] = storage[j][idx*DInWidth+:DInWidth];
           end
-        end // for i
+        end // for idx
       end // for j
     end // if xor_message
   end
@@ -606,6 +617,11 @@ module keccak_round
   // Only allow `DInWidth` that `Width` is integer divisible by `DInWidth`
 
   //`ASSERT_INIT(WidthDivisableByDInWidth_A, (Width % DInWidth) == 0)
+
+  //For Width <= 50 masking not supported
+
+  `ASSERT_INIT(MaskingWidthOK_A, !EnMasking || (Width >= 50))
+
 
   // If `run_i` triggered, it shall complete
   //`ASSERT(RunResultComplete_A, run_i ##[MaxRound:] complete_o, clk_i, !rst_ni)

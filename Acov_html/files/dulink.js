@@ -1,0 +1,2 @@
+var g_data = {"13":["work.keccak_2share",76.24,1],"8":["work.keccak_round",36.32,1],"5":["work.lc_ctrl_pkg",0.98,1],"12":["work.prim_buf",50.04,1],"15":["work.prim_count",34.59,1],"16":["work.prim_dom_and_2share",35.16,1],"10":["work.prim_flop",66.91,1],"18":["work.prim_flop_en",45.09,1],"1":["work.prim_mubi_pkg",0.14,1],"11":["work.prim_sec_anchor_buf",0.05,1],"9":["work.prim_sparse_fsm_flop",75.55,1],"3":["work.prim_util_pkg",12.50,1],"17":["work.prim_xor2",50.00,1],"7":["work.sha3_pkg",0.00,1],"6":["work.tb_keccak_round_mask",52.30,1]};
+processDuLinks(g_data);

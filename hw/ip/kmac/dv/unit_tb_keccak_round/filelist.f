@@ -1,0 +1,16 @@
+hw/ip/prim/rtl/prim_pkg.sv
+hw/ip/prim/rtl/prim_util_pkg.sv
+hw/ip/prim/rtl/prim_mubi_pkg.sv
+hw/ip/prim/rtl/prim_count_pkg.sv
+hw/ip/prim/rtl/prim_assert.sv
+hw/ip/prim/rtl/prim_flop_macros.sv
+hw/ip/prim/rtl/prim_sparse_fsm_flop.sv
+hw/ip/prim/rtl/prim_sec_anchor_buf.sv
+hw/ip/prim/rtl/prim_count.sv
+hw/ip/lc_ctrl/rtl/lc_ctrl_state_pkg.sv
+hw/ip/lc_ctrl/rtl/lc_ctrl_reg_pkg.sv  
+hw/ip/lc_ctrl/rtl/lc_ctrl_pkg.sv
+hw/ip/kmac/rtl/sha3_pkg.sv
+hw/ip/kmac/rtl/keccak_round.sv
+hw/ip/kmac/rtl/keccak_2share.sv
+hw/ip/kmac/dv/unit_tb_keccak_round/tb_keccak_round_mask.sv
